@@ -6,13 +6,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Rankings from './Components/Rankings.js'
 import Home from './Components/Home'
 import AddCar from './Components/AddCar';
+import './App.css'
 
 function App() {
 
 
 
   return (
-    
+    <div className='App'>
       <Router>
         <Routes>
           <Route exact path = "/"
@@ -23,7 +24,7 @@ function App() {
                       element = {<AddCar />}/>
         </Routes>
       </Router>
-
+    </div>
   );
 }
 

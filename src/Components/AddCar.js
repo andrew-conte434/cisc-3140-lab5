@@ -22,9 +22,8 @@ export default function AddCar(){
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json',
-                'mode' : 'cors'
             },
-            body: {
+            body: JSON.stringify({
                 Timestamp : {Timestamp},
                 Email : {email},
                 Name : {name},
@@ -33,7 +32,7 @@ export default function AddCar(){
                 Model : {model},
                 Car_ID : {ID},
                 scores : {scores}
-            }
+            })
         }
         const res = await fetch("http://127.0.0.1:5000/api/car", requestOptions)
         const obj = await res.json()
@@ -42,7 +41,7 @@ export default function AddCar(){
             setResult(`Error: Could not add Car: ${ID} to database`)
         } else {
             setSuccess(true)
-            setResult(`Successfully added Car: ${ID} to database`)
+            setResult(`Success`)
         }
     }
 
@@ -69,7 +68,7 @@ export default function AddCar(){
                 <p><strong>Enter scores separated by commas with no spaces</strong></p>
                 <input 
                         type={"button"}
-                        value={"Search"}
+                        value={"Submit"}
                         onClick={handleSubmit}
                     />
             </form>

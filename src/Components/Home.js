@@ -22,13 +22,13 @@ export default function Home() {
         <div className="page">
             <div className="menu">
                 <Link to="/rankings">
-                    <button>View Rankings</button>
+                    <button><span>View Rankings</span></button>
                 </Link>
                 <Link to="/addCar">
-                    <button>Add a Car</button>
+                    <button><span>Add a Car</span></button>
                 </Link>
-                <button>Update Owner</button>
-                <button>Delete a Car</button>
+                <button><span>Update Owner</span></button>
+                <button><span>Delete a Car</span></button>
             </div>
             <div className="searchBar">
                 <form className="form">
